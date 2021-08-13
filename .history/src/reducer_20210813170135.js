@@ -13,7 +13,7 @@ const initialValue = {
 // error : chua truyen dpo so vao reducer dc
 const actions = {
   add({ todos }, title) {
-    if (title == false) console.log("please re-enter");
+    if (title == null) console.log("please re-enter");
     else {
       todos.push({ title, completed: false });
       Storage.set(todos);
